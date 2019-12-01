@@ -12,15 +12,10 @@ jobs:
       - name: "Checkout GitHub Action"
         uses: actions/checkout@master
 
-      # - name: 'Login via Azure CLI'
-      #   uses: azure/login@v1
-      #   with:
-      #     creds: ${{ secrets.AZURE_CREDENTIALS }}
-
       - name: "Login via Azure CLI"
-        uses: Azure/actions/login@master
+        uses: azure/login@v1
         with:
-          creds: ${{ secrets.SCM_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Setup Node 10.x
         uses: actions/setup-node@v1
