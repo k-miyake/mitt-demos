@@ -30,3 +30,12 @@ jobs:
           npm run build --if-present
           npm run test --if-present
           popd
+
+      - name: "Run Azure Functions Action"
+        uses: Azure/functions-action@v1
+        id: fa
+        with:
+          app-name: bff-myk
+          # If your function app project is not located in your repository's root
+          # Please consider prefixing the project path in this package parameter
+          package: "./bff"
