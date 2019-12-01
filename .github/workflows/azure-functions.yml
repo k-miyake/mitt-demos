@@ -1,4 +1,4 @@
-name: Linux_Node_Workflow
+name: NestJS_Azure_Function
 
 on:
   push:
@@ -25,8 +25,6 @@ jobs:
       - name: "Run npm"
         shell: bash
         run: |
-          # If your function app project is not located in your repository's root
-          # Please change your directory for npm in pushd
           pushd ./bff
           npm install
           npm run build --if-present
