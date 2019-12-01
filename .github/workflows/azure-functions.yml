@@ -17,6 +17,11 @@ jobs:
       #   with:
       #     creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - name: "Login via Azure CLI"
+        uses: Azure/actions/login@master
+        with:
+          creds: ${{ secrets.SCM_CREDENTIALS }}
+
       - name: Setup Node 10.x
         uses: actions/setup-node@v1
         with:

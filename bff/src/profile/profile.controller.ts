@@ -4,6 +4,6 @@ import { Controller, Get } from '@nestjs/common';
 export class ProfileController {
   @Get()
   getProfile(): string {
-    return 'My Profile';
+    return 'My Profile is here!';
   }
 }
