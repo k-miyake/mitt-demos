@@ -9,10 +9,10 @@ jobs:
   build-and-deploy:
     runs-on: windows-latest
     steps:
-      - name: 'Checkout GitHub Action'
+      - name: "Checkout GitHub Action"
         uses: actions/checkout@master
 
-      - name: 'Login via Azure CLI'
+      - name: "Login via Azure CLI"
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
@@ -20,18 +20,18 @@ jobs:
       - name: Setup Node 10.x
         uses: actions/setup-node@v1
         with:
-          node-version: '10.x'
+          node-version: "10.x"
 
-      - name: 'Run npm'
+      - name: "Run npm"
         shell: pwsh
         run: |
           pushd .\bff
           npm install
           npm run build --if-present
-          npm run test --if-present
+          # npm run test --if-present
           popd
 
-      - name: 'Run Azure Functions Action'
+      - name: "Run Azure Functions Action"
         uses: Azure/functions-action@v1
         id: fa
         with:
