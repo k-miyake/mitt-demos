@@ -20,7 +20,7 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby Contentful starter',
   },
-  pathPrefix: '/gatsby-contentful-starter',
+  pathPrefix: '/ittt-demos',
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
