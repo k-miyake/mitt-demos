@@ -6,7 +6,7 @@ export class MittController {
     getSession() {
         return {
             title: 'Vue.js 3 に向けたVue.js 入門',
-            speaker: '@kazu_pon',
+            speaker: '@kazupon',
             start: '14:50',
             place: 'The Hub コミュニティポップアップ'
         };
